@@ -66,7 +66,7 @@ npm run dev
 ```
 npm run watch
 ```
-Then, visit `http://127.0.0.1:8000/`
+Then, visit http://127.0.0.1:8000/
 
 
 # Known Limitations
