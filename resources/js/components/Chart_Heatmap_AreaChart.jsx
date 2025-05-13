@@ -524,7 +524,7 @@ export default class Chart_Heatmap_AreaChart extends Component {
                         </div> <br></br>
                         {/* AreaChart B Container */}
                         <div style={boxStyle.boxContainer1}>
-                            <div style={boxStyle.boxHeader}>Sent Messages Area Chart</div>
+                            <div style={boxStyle.boxHeader}>Received Messages Area Chart</div>
                             <div id="areaChartB" className="chart" style={chartStyle.chart1}>{this.areaChartB_draw()}</div>
                         </div>
                     </div>
