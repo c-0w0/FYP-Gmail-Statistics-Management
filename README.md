@@ -1,66 +1,76 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+This project offers interactible elements that shows Gmail statistics over a selected period of time, in which all of them are hyperlink embedded, allowing quick access to the respective email you've just interacted in this application. 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Screenshots
 
-## About Laravel
+### First page: Statistics
+![image](https://github.com/user-attachments/assets/e772fbb4-d46a-4e95-9e5f-73ac313a5053)
+![image](https://github.com/user-attachments/assets/27462982-a36f-41b6-b32a-d15d29584151)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Second page: Management
+- If an email account was taken action of `Mark as Spam`, specific emails will be asked for it will to moved into `Spam` and reported as spam.
+- If an email account was taken action of `Block`, system will double-check with the user before tagging all the existed & incoming emails from the account as `Block`. _Check 'Known Limitations' below_
+- If an email is associated with `Unsubscribe` hyperlink, it redirects the user to the content provider's website for further action upon clicked.
+![image](https://github.com/user-attachments/assets/6bceb703-b367-43d5-aca7-e881a19270aa)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Upon clicking
+These are the brief display of the system, they are also hyperlink embedded, and showing Read/Unread based on font thickness.
+### First page: Statistics
+![image](https://github.com/user-attachments/assets/973144d0-f67d-472d-ae2d-5b5d3cf02942)
+![image](https://github.com/user-attachments/assets/7460c325-102e-4f92-9194-6c1cb0b5d5a7)
+![image](https://github.com/user-attachments/assets/703cf77d-f875-4c98-9c9b-be890c45f240)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Second page: Management
+![image](https://github.com/user-attachments/assets/b98267f8-2e63-4e48-a889-1ea37ce02f91)
+![image](https://github.com/user-attachments/assets/7e62a803-695e-4e6c-b46c-8840f6262fdc)
 
-## Learning Laravel
+The rest of the interactibles will bring you to Gmail directly, which is not provided screenshot.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Prerequisites
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- `php` version >= 8.2
+- `Nodejs`
+- Set up your own Google Cloud project, follow the steps below:
+  - Create a new project at [Google Developer Console](https://console.cloud.google.com/cloud-resource-manager).
+  - Press 'Get started' button and fill in information at [Overview](https://console.cloud.google.com/auth/overview).
+    - At the top left, if the recent project isn't selected automatically, select it (Ctrl+O).
+    ![image](https://github.com/user-attachments/assets/c60a5a90-ef6e-4f89-8883-2a62b1bd38b8)
 
-## Laravel Sponsors
+  - Add test users at [Audience](https://console.cloud.google.com/auth/audience), fill in emails to be be granted access for the project created.
+  - Create `OAuth 2.0 Client ID` at [Clients](https://console.cloud.google.com/auth/clients).
+    - After it, click on the recently created `OAuth 2.0 Client ID`.
+    - Over the right side, `Client ID` and `Client secret` are needed later.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+# Usage
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+You may git clone or download this project.
+```
+git clone https://github.com/c-0w0/FYP-Gmail-Statistics-Management.git
+```
 
-## Contributing
+**Before executing** the application, update `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` with `Client ID` and `Client secret` respectively in `.env` file .
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![image](https://github.com/user-attachments/assets/8262853d-ac58-4a4d-8f61-fc6056de7e0a)
 
-## Code of Conduct
+To run this project, type the following commands in VSC terminal:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+php artisan serve
+```
 
-## Security Vulnerabilities
+```
+npm run dev
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+npm run watch
+```
+Then, visit `http://127.0.0.1:8000/`
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Known Limitations
+
+1. This project's hyperlink only works for the first Gmail logged in.
+2. This project uses time zone of (GMT+8), and does not react to your location.
+3. The block function in `Management` page isn't the actual block function, but a filter that will be applied to move every existed & incoming emails from the email account which has been taken action.
