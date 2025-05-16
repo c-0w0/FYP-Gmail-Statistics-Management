@@ -1,4 +1,4 @@
-This project offers interactible elements that shows Gmail statistics over a selected period of time, in which all of them are hyperlink embedded, allowing quick access to the respective email you've just interacted in this application. 
+This project offers intractable elements that shows Gmail statistics over a selected period of time, in which all of them are hyperlink embedded, allowing quick access to the respective email you've just interacted in this application. 
 
 # Screenshots
 
@@ -23,7 +23,7 @@ These are the brief display of the system, they are also hyperlink embedded, and
 ![image](https://github.com/user-attachments/assets/b98267f8-2e63-4e48-a889-1ea37ce02f91)
 ![image](https://github.com/user-attachments/assets/7e62a803-695e-4e6c-b46c-8840f6262fdc)
 
-The rest of the interactibles will bring you to Gmail directly, which is not provided screenshot.
+The rest of the intractables will bring you to Gmail directly, which is not provided screenshot.
 
 
 # Prerequisites
