@@ -1,7 +1,7 @@
-This project offers intractable elements that shows Gmail statistics over a selected period of time, in which all of them are hyperlink embedded, allowing quick access to the respective email you've just interacted in this application. 
+# Gmail Statistics and Management
+This web project offers intractable elements that shows Gmail statistics over a selected period of time, in which all of them are hyperlink embedded, allowing quick access to the respective email you've just interacted in this application. 
 
-# Screenshots
-
+## Screenshots
 ### First page: Statistics
 ![image](https://github.com/user-attachments/assets/e772fbb4-d46a-4e95-9e5f-73ac313a5053)
 ![image](https://github.com/user-attachments/assets/27462982-a36f-41b6-b32a-d15d29584151)
@@ -12,7 +12,7 @@ This project offers intractable elements that shows Gmail statistics over a sele
 - If an email is associated with `Unsubscribe` hyperlink, it redirects the user to the content provider's website for further action upon clicked.
 ![image](https://github.com/user-attachments/assets/6bceb703-b367-43d5-aca7-e881a19270aa)
 
-## Upon clicking
+## Screenshot - Upon clicking
 These are the brief display of the system, they are also hyperlink embedded, and showing Read/Unread based on font thickness.
 ### First page: Statistics
 ![image](https://github.com/user-attachments/assets/973144d0-f67d-472d-ae2d-5b5d3cf02942)
@@ -25,9 +25,7 @@ These are the brief display of the system, they are also hyperlink embedded, and
 
 The rest of the intractables will bring you to Gmail directly, which is not provided screenshot.
 
-
-# Prerequisites
-
+## Prerequisites
 - `php` version >= 8.2
 - `Nodejs`
 - Set up your own Google Cloud project, follow the steps below:
@@ -41,36 +39,28 @@ The rest of the intractables will bring you to Gmail directly, which is not prov
     - After it, click on the recently created `OAuth 2.0 Client ID`.
     - Over the right side, `Client ID` and `Client secret` are needed later.
 
-
-# Usage
-
+## Usage
 You may git clone or download this project.
 ```
 git clone https://github.com/c-0w0/FYP-Gmail-Statistics-Management.git
 ```
-
 **Before executing** the application, update `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` with `Client ID` and `Client secret` respectively in `.env` file .
 
 ![image](https://github.com/user-attachments/assets/8262853d-ac58-4a4d-8f61-fc6056de7e0a)
 
 To run this project, type the following commands in VSC terminal:
-
 ```
 php artisan serve
 ```
-
 ```
 npm run dev
 ```
-
 ```
 npm run watch
 ```
 Then, visit http://127.0.0.1:8000/
 
-
-# Known Limitations
-
+## Limitations
 1. This project's hyperlink only works for the first Gmail logged in.
 2. This project uses time zone of (GMT+8), and does not react to your location.
 3. The block function in `Management` page isn't the actual block function, but a filter that will be applied to move every existed & incoming emails from the email account which has been taken action.
